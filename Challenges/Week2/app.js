@@ -1,3 +1,7 @@
+//variables
+var user_Input= '';
+
+
 //create function
   //control and return statements
 
@@ -6,3 +10,4 @@
 //Call function
 
 //Alert user results
+console.log('test');
