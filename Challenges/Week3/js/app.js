@@ -1,7 +1,7 @@
 //  1.)  Make sure you have a reference to jQuery from a CDN in the index.html file.  
 
 //  2.)  Use a jQuery to hide all of the answers to all the questions.
-$('.answer')
+$('.answer').hide();
 
 /*  3.)  Write code to show the answer when hovering over a flash card, and hide it when the mouse leaves. 
     Find the approriate event on the jQuery API page to trigger an action on hover https://api.jquery.com/category/events/
