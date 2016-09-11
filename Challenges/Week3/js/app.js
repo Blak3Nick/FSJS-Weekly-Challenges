@@ -19,4 +19,14 @@ $('.flash-card').mouseleave(function(){
 /*  4.) Use jQuery to find the button element on the page and have it toggle all of the answers on and off when clicked.
     Hint: jQuery has a toggle function that can toggle the visibility of a selected DOM node.
     Bonus:  Change the text of the button using jQuery when you toggle the answers on/off. */  
-$()
+$('.cheat-button').click(function(){
+    $('.answer').toggle();
+    $(this).toggleClass('selected');
+        if ( $(this).hasClass( "selected" ) ) {
+ 
+        $( this ).css('background-color', red);
+ 
+    } else {
+        $(this).css('background-color', 'purple');
+    }
+});
