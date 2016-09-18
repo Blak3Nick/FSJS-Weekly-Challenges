@@ -11,8 +11,24 @@ function openBlock (id) {
     // TODO: add the "active" class to the li element that contains the link that was clicked
 
 }
+var about = $('#menu_item_about');
+var home = $('#menu_item_home');
+about.click(function(){
+    $('#about').addClass('show-block').removeClass('twocolumn');
+    $('#home').hide();
+    
+    
+});
+home.click(function(){
+    $('#about').addClass('show-block').removeClass('twocolumn');
+    $('#home').show();
+    
+    
+});
+
 
 // TODO: add the "hover" class to the menu items when you hover over them
 
 
 // TODO: set up the tooltip plugin on all of the links in the menu
+$('#menu_item_about').tooltip();

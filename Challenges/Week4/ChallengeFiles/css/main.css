@@ -59,6 +59,22 @@ h2 {
     .example-block .twocolumn {
         display: none;
     }
+    .show-block {
+    margin: 1% 0;
+    width: 100%;
+    overflow: visible;
+}
+    .show-block .block {
+        background: #bbdefb;
+        box-shadow: 1px 2px 8px rgba(0,0,0,0.3);
+        box-sizing: border-box;
+        padding: 1%;
+        vertical-align: top;
+        border-radius: 10px;
+        float: left;
+        margin-bottom: 1%;
+        color: #666;
+    }
 
 ul {
     width: 100%;
