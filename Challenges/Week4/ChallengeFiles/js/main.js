@@ -25,37 +25,47 @@ var allClass = function() {
     $('#blog').addClass('twocolumn').removeClass('show-block');
     $('#contact').addClass('twocolumn').removeClass('show-block');
     $('#home').hide();
-    
+    about.parent().removeClass('active');
+    home.parent().removeClass('active');
+    death.parent().removeClass('active');
+    cat.parent().removeClass('active');
+    blog.parent().removeClass('active');
+    contact.parent().removeClass('active');
 };
 about.click(function(){
     allClass();
     $('#about').addClass('show-block').removeClass('twocolumn'); 
+    about.parent().addClass('active');
 });
 home.click(function(){
     allClass();
     $('#home').show();  
+    home.parent().addClass('active');
     
 });
 death.click(function(){
     allClass();
     $('#plans').addClass('show-block').removeClass('twocolumn');
+    death.parent().addClass('active');
 
         
 });
 cat.click(function(){
     allClass();
     $('#cat').addClass('show-block').removeClass('twocolumn');
+    cat.parent().addClass('active');
 
-        
 });
 blog.click(function(){
     allClass();
     $('#blog').addClass('show-block').removeClass('twocolumn');
+    blog.parent().addClass('active');
       
 });
 contact.click(function(){
     allClass();
     $('#contact').addClass('show-block').removeClass('twocolumn');
+    contact.parent().addClass('active');
       
 });
 // TODO: add the "hover" class to the menu items when you hover over them
