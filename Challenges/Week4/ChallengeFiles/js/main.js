@@ -72,9 +72,21 @@ contact.click(function(){
 
 
 // TODO: set up the tooltip plugin on all of the links in the menu
-about.tooltip();
-home.tooltip();
-death.tooltip();
-cat.tooltip();
-blog.tooltip();
-contact.tooltip();
+about.tooltip({
+    delay: 1000
+});
+home.tooltip({
+    delay: 1000
+});
+death.tooltip({
+    delay: 1000
+});
+cat.tooltip({
+    delay: 1000
+});
+blog.tooltip({
+    delay: 1000
+});
+contact.tooltip({
+    delay: 1000
+});
