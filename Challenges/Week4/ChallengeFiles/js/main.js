@@ -13,20 +13,51 @@ function openBlock (id) {
 }
 var about = $('#menu_item_about');
 var home = $('#menu_item_home');
-about.click(function(){
-    $('#about').addClass('show-block').removeClass('twocolumn');
+var death =  $('#menu_item_plans');
+var cat = $('#menu_item_cat');
+var blog = $('#menu_item_blog');
+var contact =  $('#menu_item_contact');
+
+var allClass = function() {
+    $('#plans').addClass('twocolumn').removeClass('show-block');
+    $('#cat').addClass('twocolumn').removeClass('show-block');
+    $('#about').addClass('twocolumn').removeClass('show-block');
+    $('#blog').addClass('twocolumn').removeClass('show-block');
+    $('#contact').addClass('twocolumn').removeClass('show-block');
     $('#home').hide();
     
-    
+};
+about.click(function(){
+    allClass();
+    $('#about').addClass('show-block').removeClass('twocolumn'); 
 });
 home.click(function(){
-    $('#about').addClass('show-block').removeClass('twocolumn');
-    $('#home').show();
-    
+    allClass();
+    $('#home').show();  
     
 });
+death.click(function(){
+    allClass();
+    $('#plans').addClass('show-block').removeClass('twocolumn');
 
+        
+});
+cat.click(function(){
+    allClass();
+    $('#cat').addClass('show-block').removeClass('twocolumn');
 
+        
+});
+blog.click(function(){
+    allClass();
+    $('#blog').addClass('show-block').removeClass('twocolumn');
+      
+});
+contact.click(function(){
+    allClass();
+    $('#contact').addClass('show-block').removeClass('twocolumn');
+      
+});
 // TODO: add the "hover" class to the menu items when you hover over them
 
 
