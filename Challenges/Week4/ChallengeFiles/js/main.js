@@ -6,7 +6,7 @@ function openBlock (id) {
         blocks[y].style.display = "none";
     }
     block.style.display = "block";
-    
+
     // TODO: remove the "active" class from all of the li elements inside the menu
     // TODO: add the "active" class to the li element that contains the link that was clicked
 
@@ -34,40 +34,76 @@ var allClass = function() {
 };
 about.click(function(){
     allClass();
-    $('#about').addClass('show-block').removeClass('twocolumn'); 
-    about.parent().addClass('active').addClass('hover');
+    $('#about').addClass('show-block').removeClass('twocolumn');
+    about.parent().addClass('active');
 });
+about.hover(
+  function() {
+    $( this ).addClass( "hover" );
+  }, function() {
+    $( this ).removeClass( "hover" );
+  }
+);
 home.click(function(){
     allClass();
-    $('#home').show();  
-    home.parent().addClass('active').addClass('hover');
-    
+    $('#home').show();
+    home.parent().addClass('active');
 });
+home.hover(
+  function() {
+    $( this ).addClass( "hover" );
+  }, function() {
+    $( this ).removeClass( "hover" );
+  }
+);
 death.click(function(){
     allClass();
     $('#plans').addClass('show-block').removeClass('twocolumn');
-    death.parent().addClass('active').addClass('hover');
-
-        
+    death.parent().addClass('active');
 });
+death.hover(
+  function() {
+    $( this ).addClass( "hover" );
+  }, function() {
+    $( this ).removeClass( "hover" );
+  }
+);
 cat.click(function(){
     allClass();
     $('#cat').addClass('show-block').removeClass('twocolumn');
-    cat.parent().addClass('active').addClass('hover');
-
+    cat.parent().addClass('active');
 });
+cat.hover(
+  function() {
+    $( this ).addClass( "hover" );
+  }, function() {
+    $( this ).removeClass( "hover" );
+  }
+);
 blog.click(function(){
     allClass();
     $('#blog').addClass('show-block').removeClass('twocolumn');
-    blog.parent().addClass('active').addClass('hover');
-      
+    blog.parent().addClass('active');
 });
+blog.hover(
+  function() {
+    $( this ).addClass( "hover" );
+  }, function() {
+    $( this ).removeClass( "hover" );
+  }
+);
 contact.click(function(){
     allClass();
     $('#contact').addClass('show-block').removeClass('twocolumn');
-    contact.parent().addClass('active').addClass('hover');
-      
+    contact.parent().addClass('active');
 });
+contact.hover(
+  function() {
+    $( this ).addClass( "hover" );
+  }, function() {
+    $( this ).removeClass( "hover" );
+  }
+);
 // TODO: add the "hover" class to the menu items when you hover over them
 
 
