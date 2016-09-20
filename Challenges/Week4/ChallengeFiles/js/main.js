@@ -6,16 +6,12 @@ function openBlock (id) {
         blocks[y].style.display = "none";
     }
     block.style.display = "block";
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> upstream/master
     // TODO: remove the "active" class from all of the li elements inside the menu
     // TODO: add the "active" class to the li element that contains the link that was clicked
 
 }
-<<<<<<< HEAD
+
 var about = $('#menu_item_about');
 var home = $('#menu_item_home');
 var death =  $('#menu_item_plans');
@@ -109,14 +105,11 @@ contact.hover(
     $( this ).removeClass( "hover" );
   }
 );
-=======
 
->>>>>>> upstream/master
 // TODO: add the "hover" class to the menu items when you hover over them
 
 
-// TODO: set up the tooltip plugin on all of the links in the menu
-<<<<<<< HEAD
+
 about.tooltip({
     delay: 1000
 });
@@ -135,6 +128,4 @@ blog.tooltip({
 contact.tooltip({
     delay: 1000
 });
-=======
 
->>>>>>> upstream/master
