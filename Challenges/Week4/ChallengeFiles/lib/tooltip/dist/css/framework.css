@@ -387,10 +387,7 @@ strong {
 [class*='icon-'].icon-white {
     background-image: url('../images/icons.white.png');
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
 .icon-plus {background-position: 0px 0px;}
 .icon-box {background-position: -20px 0px;}
 .icon-search {background-position: -40px 0px;}
@@ -638,10 +635,7 @@ $icon: 18px;
     @include iconsprite('checkbox', $icon, 1) {
         &.checked {
             background-position: (-$icon * 1) (-$icon * 2);
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
             &:hover {
                 background-position: (-$icon * 1) (-$icon * 3);
             }
@@ -897,8 +891,4 @@ table th.sortable.desc:before {
     opacity: 0;
     transform: translateX(-40px);
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> upstream/master

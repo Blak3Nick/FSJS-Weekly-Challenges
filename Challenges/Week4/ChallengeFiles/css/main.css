@@ -59,6 +59,7 @@ h2 {
     .example-block .twocolumn {
         display: none;
     }
+<<<<<<< HEAD
     .show-block {
     margin: 1% 0;
     width: 100%;
@@ -75,6 +76,8 @@ h2 {
         margin-bottom: 1%;
         color: #666;
     }
+=======
+>>>>>>> upstream/master
 
 ul {
     width: 100%;
@@ -113,4 +116,8 @@ p {
     font-weight: bold;
     text-decoration: none;
     color: #000;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> upstream/master
