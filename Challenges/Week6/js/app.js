@@ -45,7 +45,22 @@ widthMinus.click(function() {
   return trackWidth;
   
 });
-
+volumePlus.click(function() {
+    trackHeight = trackHeight +1;
+    trackWidth = trackWidth +1;
+  box.css('height', trackHeight);
+  box.css('width', trackWidth);
+  
+  
+});
+volumeMinus.click(function() {
+    trackHeight = trackHeight -1;
+    trackWidth = trackWidth -1;
+  box.css('height', trackHeight);
+  box.css('width', trackWidth);
+  
+  
+});
 //Create a button that prints the object and its attributes to the page (use the span "output".
 
 //Extra credit
