@@ -1,8 +1,11 @@
 //#Week 6 JQuery Code Challenge
 var btnPlus = $('#HeightIncrease');
 var btnMinus = $('#HeightDecrease');
+var printBtn = $("#Print");
 var box = $('#box');
 var trackHeight = 20;
+var output = $('#output');
+
 //Objects
 		
 //Code Challenge:
@@ -21,8 +24,10 @@ btnMinus.click(function() {
   return trackHeight;
   
 });
+printBtn.click(function(){
+    output.append("<p>"+box+"</p>");
+});
 //Create a button that prints the object and its attributes to the page (use the span "output".
-trackHeight = trackHeight;
- console.log(trackHeight);
+
 //Extra credit
 //Create interactive buttons to decrease or increase the Width and Volume
