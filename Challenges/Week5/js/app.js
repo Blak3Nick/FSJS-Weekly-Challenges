@@ -1,3 +1,10 @@
+var pokemonAPI = 'http://pokeapi.co/api/v2/pokemon/';
+var getRandomNUmber = function(){
+    return Math.floor(Math.random()*10);
+
+};
+
+pokemonAPI+= getRandomNUmber();
 function addPokemon(name) {
     $(`
         <li class="poke-card">
@@ -5,7 +12,12 @@ function addPokemon(name) {
         </li>
     `).appendTo('#pokemon');
 };
-
+$.getJSON( pokemonAPI, function(data) {
+  console.log( "success" );
+  var id = getRandomNUmber();
+  console.log(id);
+  
+});
 
 // 1.)  Use the PokéAPI from http://pokeapi.co along with jQuery's getJSON function to retrieve the first 20 Pokémon.
 // 1.1)  Use the addPokemon function to show each of the Pokémon names that were retrieved.  

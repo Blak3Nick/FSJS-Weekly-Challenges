@@ -74,4 +74,12 @@ ul li {
   .header {
     margin-top: 3em;
   }
+
+#box{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: green;
+    top: 50%;
+    left: 50%;
 }
