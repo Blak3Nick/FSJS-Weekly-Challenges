@@ -5,6 +5,12 @@ var printBtn = $("#Print");
 var box = $('#box');
 var trackHeight = 20;
 var output = $('#output');
+var widthPlus = $('#WidthIncrease');
+var trackWidth = 20;
+var widthMinus = $('#WidthDecrease');
+var volumePlus = $('#VolumeIncrease');
+var volumeMinus = $('#VolumeDecrease');
+
 
 //Objects
 		
@@ -27,6 +33,19 @@ btnMinus.click(function() {
 printBtn.click(function(){
     output.append("<p>"+box+"</p>");
 });
+widthPlus.click(function() {
+    trackWidth = trackWidth +1;
+  box.css('width', trackWidth);
+  return trackWidth;
+  
+});
+widthMinus.click(function() {
+    trackWidth = trackWidth -1;
+  box.css('width', trackWidth);
+  return trackWidth;
+  
+});
+
 //Create a button that prints the object and its attributes to the page (use the span "output".
 
 //Extra credit
