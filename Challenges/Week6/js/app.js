@@ -31,7 +31,8 @@ btnMinus.click(function() {
   
 });
 printBtn.click(function(){
-    output.append("<p>"+box+"</p>");
+    var r = '<button></button>';
+    output.append(r);
 });
 widthPlus.click(function() {
     trackWidth = trackWidth +1;
