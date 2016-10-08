@@ -6,15 +6,15 @@
  * first param to the https.get() function
  *
  * So something like
- * var options = {
- *   hostname: api.github.com,
- *   path: <<try to find in documentation linked in readme>>,
- *   headers: {
- *     'User-Agent': '<<your github username>>'
- *   }
- * };
- *
- */
+ * */
+ var options = {
+    hostname: api.github.com,
+    path: '',
+    headers: {
+      'User-Agent': 'Blak3Nick'
+    }
+  };
+
 
 function getRepos(username){
   console.log('Repos for ' + username);
