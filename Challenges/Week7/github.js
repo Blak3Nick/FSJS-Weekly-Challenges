@@ -7,8 +7,12 @@
  *
  * So something like
  * */
+<script
+src="http://code.jquery.com/jquery-3.1.1.min.js"
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+crossorigin="anonymous"></script>
  var options = {
-    hostname: api.github.com,
+    hostname: "api.github.com",
     path: '',
     headers: {
       'User-Agent': 'Blak3Nick'
@@ -17,5 +21,15 @@
 
 
 function getRepos(username){
-  console.log('Repos for ' + username);
+  api = "https://api.github.com/search/users?q=";
+      api+= username;
+  $.getJSON( api, function( data ) {
+    var items = [];
+    $.each( data, function( key, val ) {
+      items.push(  key + "'>" + val  );
+    });
+
+    console.log(items);
+  });
 }
+getRepos("Blak3Nick");
