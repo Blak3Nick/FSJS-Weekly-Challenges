@@ -7,29 +7,47 @@
  *
  * So something like
  * */
-<script
-src="http://code.jquery.com/jquery-3.1.1.min.js"
-integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-crossorigin="anonymous"></script>
- var options = {
-    hostname: "api.github.com",
-    path: '',
-    headers: {
-      'User-Agent': 'Blak3Nick'
-    }
-  };
+var http = require('http');
 
+var options = {
+  hostname: 'https://api.github.com/search/users?q=Blak3Nick'
+  //,port: app.get('port')
+  ,path: '/users'
+  ,method: 'GET'
+  ,headers: { 'Content-Type': 'application/json' }
+};
 
-function getRepos(username){
-  api = "https://api.github.com/search/users?q=";
-      api+= username;
-  $.getJSON( api, function( data ) {
-    var items = [];
-    $.each( data, function( key, val ) {
-      items.push(  key + "'>" + val  );
-    });
-
-    console.log(items);
+var req = http.request(options, function(res) {
+  res.setEncoding('utf8');
+  res.on('data', function (data) {
+    console.log(data); // I can't parse it because, it's a string. why?
   });
-}
-getRepos("Blak3Nick");
+});
+req.on('error', function(e) {
+  console.log('problem with request: ' + e.message);
+});
+req.end();
+
+
+ // var options = {
+ //    hostname: "api.github.com",
+ //    path: '',
+ //    headers: {
+ //      'User-Agent': 'Blak3Nick'
+ //    }
+ //  };
+
+
+// function getRepos(username){
+//   api = "https://api.github.com/search/users?q=";
+//       api+= username;
+//   $.getJSON( api, function( data ) {
+//     var items = [];
+//     $.each( data, function( key, val ) {
+//       items.push(  key + "'>" + val  );
+//     });
+//
+//     console.log(items);
+//   });
+// }
+// getRepos("Blak3Nick");
