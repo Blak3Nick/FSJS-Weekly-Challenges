@@ -1,23 +1,25 @@
-var http = require('http');
-
+const https = require('https');
+var username = 'Blak3Nick';
 
 var options = {
-    host: 'https://api.github.com/search/users?q=Blak3Nick',
-    path: '/search/users?q=Blak3Nick'
+  hostname: 'api.github.com',
+  port: 443,
+  path: '/search/users?q=Blak3Nick',
+  method: 'GET',
+  headers: { 'User-Agent': 'Blak3Nick' }
 };
 
-callback = function(response) {
-    var str = '';
 
-    //another chunk of data has been recieved, so append it to `str`
-    response.on('data', function (chunk) {
-        str += chunk;
-    });
+var req = https.request(options, (res) => {
+  console.log('statusCode:', res.statusCode);
+  console.log('headers:', res.headers);
 
-    //the whole response has been recieved, so we just print it out here
-    response.on('end', function () {
-        console.log(str);
-    });
-}
+  res.on('data', (d) => {
+    process.stdout.write(d);
+  });
+});
+req.end();
 
-http.request(options, callback).end();
+req.on('error', (e) => {
+  console.error(e);
+});
