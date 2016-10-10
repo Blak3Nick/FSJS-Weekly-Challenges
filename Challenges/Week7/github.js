@@ -10,19 +10,19 @@ var options = {
 };
 
 
-
+var response = '';
 exports.getRepos = function(username){
 options.path += username;
 options.path += '/repos';
 var req = https.request(options, (res) => {
   console.log('statusCode:', res.statusCode);
-  console.log('headers:', res.headers);
-
+  // console.log('headers:', res.headers);
   res.on('data', (d) => {
-    process.stdout.write(d)[0][0].name;
+    process.stdout.write(d);
   });
 });
 req.end();
+
 
 req.on('error', (e) => {
   console.error(e);
