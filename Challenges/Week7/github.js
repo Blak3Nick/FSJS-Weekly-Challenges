@@ -19,6 +19,7 @@ var req = https.request(options, (res) => {
   // console.log('headers:', res.headers);
   res.on('data', (d) => {
     var profiles = JSON.parse(d);
+    profiles+= profiles;
 
   });
 });
