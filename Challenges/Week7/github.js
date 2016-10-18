@@ -18,18 +18,20 @@ exports.getRepos = function(username){
     var req = https.request(options, (res) => {
       console.log('statusCode:', res.statusCode);
     // console.log('headers:', res.headers);
-      res.on('data', (d) => {
-        response += d;
-        var profiles = "";
-        profiles += JSON.parse(response);
+  res.on('data', (d) => {
+    response += d;
 
-      });
-  });
-  req.end( function(profiles){
+});
+  res.on('end', function () {
 
+    var profiles = JSON.parse(response);
     console.log(profiles);
   });
-  req.on('error', (e) => {
+  res.on('error', (e) => {
     console.error(e);
+});
   });
+
+  req.end();
+
 }
